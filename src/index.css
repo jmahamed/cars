@@ -1,13 +1,244 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --orange-red: #EA3C13;
+  --dark-red: #B42605;
+  --white: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+}
+
+body {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    background-color: #F4F4F4;
+  }
+  
+  /* navbar */
+  
+  nav {
+    display: flex;
+    width: 1920px;
+    height: 72px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  li {
+    text-decoration: none;
+    list-style-type: none;
+  }
+  
+  nav a {
+    text-decoration: none;
+  }
+  
+  nav button {
+    width: 166px;
+    height: 45px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--orange-red);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--white);
+  }
+  
+  .btns {
+    display: flex;
+    align-items: center;
+    width: 229px;
+    justify-content: space-between;
+  }
+  
+  .btns:hover {
+    cursor: pointer;
+  }
+  
+  .btns button:hover {
+    background-color: var(--dark-red);
+    cursor: pointer;
+  }
+  
+  .nav-items {
+    display: flex;
+    width: 666px;
+    height: 44px;
+    justify-content: space-around;
+  }
+  
+  .nav-items li:hover {
+    padding-bottom: 21px;
+    border-bottom: solid 4px #EA3C13;
+  }
+  
+  
+  /* hero */
+  
+  .hero {
+    position: relative;
+    width: 1920px;
+    height: 423px;
+    background-image: url("/public/hero-img.png");
+    margin-bottom: 128px;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    width: 1920px;
+    height: 423px;
+    background: linear-gradient(180deg, rgba(234, 60, 19, 0.30) 0%, rgba(234, 60, 19, 0.90) 100%);
+  }
+  
+  .hero-txt {
+    margin: 180px 139px 0 255px;
+    width: 810px;
+  
+  }
+  
+  .hero-txt h1 {
+    font-size: 64px;
+    color: white;
+  }
+  
+  .hero-txt p {
+    margin-top: 32px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  /* main */
+
+  main {
+    display: flex;
+    justify-content: center;
+    column-gap: 14px;
+    width: 1920px;
+  }
+  
+  .car-container {
+    display: flex;
+    flex-direction: column;
+    width: 1050px;
+    row-gap: 24px;
+  }
+  
+  .car {
+    display: flex;
+    align-items: flex-end;
+    width: 1050px;
+    height: 191px;
+    padding: 24px;
+    background-color: var(--white);
+    border-radius: 8px;
+  }
+  
+  .car button {
+    background-color: white;
+    border: 1px solid #EA3C13;
+    width: 92px;
+    height: 34px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--orange-red);
+  }
+
+  .car button:hover {
+    cursor: pointer;
+    border: var(--dark-red) 1px solid;
+    color: var(--dark-red);
+  }
+  
+  .car-details {
+    width: 643px;
+    height: 140px;
+    margin-left: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .car-details h3 {
+    margin-bottom: 15px;
+  }
+  
+  .car-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 502px;
+    height: 94px;
+    column-gap: 110px;
+    row-gap: 24px;
+  }
+  
+  .spec {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .spec span {
+    color: #acacac;
+    font-size: 16px;
+  }
+  
+  .spec p {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* filter */
+
+.filters {
+  width: 346px;
+  height: 515px;
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.filters h3 {
+  padding-bottom: 24px;
+  width: 298px;
+  border-bottom: 3px solid black;
+}
+
+.filter {
+  margin-top: 24px;
+}
+
+.filter h4 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.filter select {
+  width: 147px;
+  height: 45px;
+  font-size: 18px;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #B1B1B1;
+  border: 1px solid #B1B1B1;
+
+}
+
+#color {
+  width: 297px;
+  height: 45px;
 }
